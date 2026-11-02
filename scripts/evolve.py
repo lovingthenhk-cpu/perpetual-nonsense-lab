@@ -20,7 +20,9 @@ MODES = [
     ("machine", "machine", "自動的に役立たない出力装置", "何かは出ますが、その用途は誰も知りません。", "▣", ["#49352e", "#e6b499"], "BUTTON / PRINT A RECEIPT"),
     ("species", "simulation", "未分類の小さな生態系", "学名が決まるより先に増え始めた存在たち。", "✳", ["#304535", "#b9f1a9"], "CLICK / RELOCATE ORGANISMS"),
     ("calculator", "machine", "確信を持って間違える計算機", "四則演算の答えに、必ずしも数を返しません。", "≠", ["#45402b", "#e7e68e"], "FORM / MAKE A MISTAKE"),
-    ("telegraph", "document", "宛先のない通信記録", "誰からも送られていない電文を受信し続けます。", "⋮", ["#2d3c49", "#add7ff"], "STREAM / INTERCEPT NOTHING")
+    ("telegraph", "document", "宛先のない通信記録", "誰からも送られていない電文を受信し続けます。", "⋮", ["#2d3c49", "#add7ff"], "STREAM / INTERCEPT NOTHING"),
+    ("council", "document", "議事録のない常設会議", "結論が出ないことだけが、すでに決定されています。", "※", ["#3c3540", "#ebc6e8"], "BUTTON / PASS RESOLUTION"),
+    ("elevator", "simulation", "存在しない階への昇降機", "目的階は毎回表示されますが、実在性は保証されません。", "⇵", ["#303f4b", "#d2e4ff"], "BUTTON / CHANGE FLOOR")
 ]
 ADJECTIVES = [
     "遠慮がちな", "昨日から届いた", "誰も知らない", "内向的な", "未提出の", "小さすぎる",
