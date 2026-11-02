@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026.11.02 23:41 JST",
+  "updated": "2026.11.02 23:44 JST",
   "exhibits": [
     {
       "id": "specimen-0001",
@@ -480,6 +480,166 @@
       ],
       "seed": 1803229939,
       "instruction": "STREAM / INTERCEPT NOTHING",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0031",
+      "number": 31,
+      "title": "ほとんど正しい見送り会",
+      "description": "見た目と機能の関係は確認されていません。 / 何かは出ますが、その用途は誰も知りません。",
+      "category": "machine",
+      "mode": "machine",
+      "glyph": "▣",
+      "colors": [
+        "#49352e",
+        "#e6b499"
+      ],
+      "seed": 513386522,
+      "instruction": "BUTTON / PRINT A RECEIPT",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0032",
+      "number": 32,
+      "title": "ややお節介な都市計画",
+      "description": "担当者は現在、不在ということになっています。 / 学名が決まるより先に増え始めた存在たち。",
+      "category": "simulation",
+      "mode": "species",
+      "glyph": "✳",
+      "colors": [
+        "#304535",
+        "#b9f1a9"
+      ],
+      "seed": 507448074,
+      "instruction": "CLICK / RELOCATE ORGANISMS",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0033",
+      "number": 33,
+      "title": "妙に丁寧な重力",
+      "description": "動作原理は不明ですが、操作には応じます。 / 四則演算の答えに、必ずしも数を返しません。",
+      "category": "machine",
+      "mode": "calculator",
+      "glyph": "≠",
+      "colors": [
+        "#45402b",
+        "#e7e68e"
+      ],
+      "seed": 1506939382,
+      "instruction": "FORM / MAKE A MISTAKE",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0034",
+      "number": 34,
+      "title": "誰も知らない観測所",
+      "description": "どこかには必要かもしれません。ここでは不要です。 / 誰からも送られていない電文を受信し続けます。",
+      "category": "document",
+      "mode": "telegraph",
+      "glyph": "⋮",
+      "colors": [
+        "#2d3c49",
+        "#add7ff"
+      ],
+      "seed": 850218308,
+      "instruction": "STREAM / INTERCEPT NOTHING",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0035",
+      "number": 35,
+      "title": "斜め45度の返却口",
+      "description": "どこかには必要かもしれません。ここでは不要です。 / 結論が出ないことだけが、すでに決定されています。",
+      "category": "document",
+      "mode": "council",
+      "glyph": "※",
+      "colors": [
+        "#3c3540",
+        "#ebc6e8"
+      ],
+      "seed": 2062530002,
+      "instruction": "BUTTON / PASS RESOLUTION",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0036",
+      "number": 36,
+      "title": "帰宅途中の世界線",
+      "description": "もう少しで意味が生まれそうですが、たぶん生まれません。 / 目的階は毎回表示されますが、実在性は保証されません。",
+      "category": "simulation",
+      "mode": "elevator",
+      "glyph": "⇵",
+      "colors": [
+        "#303f4b",
+        "#d2e4ff"
+      ],
+      "seed": 1386869530,
+      "instruction": "BUTTON / CHANGE FLOOR",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0037",
+      "number": 37,
+      "title": "あきらめの悪い信号機",
+      "description": "有用性の審査は、まだ始まっていません。 / 信用すると少し困る、根拠のない未来予測。",
+      "category": "machine",
+      "mode": "oracle",
+      "glyph": "◇",
+      "colors": [
+        "#28382d",
+        "#d4f18a"
+      ],
+      "seed": 1535276120,
+      "instruction": "BUTTON / ASK AGAIN",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0038",
+      "number": 38,
+      "title": "自称無害な取扱説明書",
+      "description": "見た目と機能の関係は確認されていません。 / 複数の点が、なぜかこの場所に集まり続ける。",
+      "category": "simulation",
+      "mode": "orbit",
+      "glyph": "◉",
+      "colors": [
+        "#18383b",
+        "#8ddbd6"
+      ],
+      "seed": 324309036,
+      "instruction": "MOUSE / DISTURB PARTICLES",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0039",
+      "number": 39,
+      "title": "反省中の都市計画",
+      "description": "効果は実証されていません。結果だけが残ります。 / 正確であることを自主的に放棄した時刻表示。",
+      "category": "machine",
+      "mode": "clock",
+      "glyph": "◷",
+      "colors": [
+        "#433023",
+        "#f5c58a"
+      ],
+      "seed": 1759350196,
+      "instruction": "BUTTON / CHANGE THE TIME",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0040",
+      "number": 40,
+      "title": "内向的な転送装置",
+      "description": "もう少しで意味が生まれそうですが、たぶん生まれません。 / 進捗率は数字です。完了を意味するものではありません。",
+      "category": "simulation",
+      "mode": "queue",
+      "glyph": "↻",
+      "colors": [
+        "#2f2b44",
+        "#c8b5ff"
+      ],
+      "seed": 704097868,
+      "instruction": "BUTTON / START OVER",
       "date": "2026.11.02"
     }
   ]
