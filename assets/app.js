@@ -110,13 +110,39 @@
       ctx.fillStyle="#89a990";ctx.font="11px monospace";ctx.fillText("LIFE FORMS: "+bodies.length+" / CLICK TO DISPLACE",18,height-20);raf=requestAnimationFrame(frame);
     }frame();addCleanup(()=>{cancelAnimationFrame(raf);c.removeEventListener("click",spawn);});
   }
+  function calculator(it,r){
+    const w=wrap("UNRELIABLE CALCULATION UNIT", "≠", "すべての答えは参考値です。特に正しい答えは保証されません。");
+    const f=mk("form","exp-form"), row=mk("div");
+    row.style.cssText="display:grid;grid-template-columns:1fr 80px 1fr;gap:7px;align-items:center";
+    const a=mk("input"),b=mk("input"),op=mk("select");a.type="number";b.type="number";a.step="any";b.step="any";a.value="1";b.value="1";
+    ["+","−","×","÷"].forEach(c=>op.append(mk("option",null,c)));row.append(a,op,b);f.append(row);
+    const answer=mk("div","exp-output","= ?");f.append(answer);
+    const submit=button(f,"数学を無視して計算 ↗",()=>{});submit.type="submit";
+    const choices=["ほぼ正解","暫定的に水曜日","本日は定休日","17匹の思想","計算権限がありません","たぶん昨日","未観測の数値","却下"];
+    f.addEventListener("submit",e=>{e.preventDefault();const x=Number(a.value),y=Number(b.value);
+      const real=op.value==="+"?x+y:op.value==="−"?x-y:op.value==="×"?x*y:y===0?"∞":x/y;
+      answer.textContent="結果: "+(r()<.18?String(real):pick(choices,r))+" / 正答である確率は非公開です。";
+    });w.append(f);
+  }
+  function telegraph(it,r){
+    const w=wrap("UNSOLICITED SIGNAL RECEIVER","⋮","周波数はわかりません。相手もいません。");
+    const log=mk("div","exp-output");log.style.cssText="text-align:left;white-space:pre-line;font-size:12px;min-height:230px;max-height:250px;overflow:hidden";
+    w.append(log);
+    const subject=["観測局","北側の空","行方不明の曜日","予備の太陽","第三会議室","衛星の夢","終端駅"];
+    const action=["現在、無人です。","応答する気配なし。","新しい沈黙を受信。","担当者不在。","とても微弱な拍手を検知。","前日の信号を確認。","暗号の代わりに空白を受信。"];
+    let lines=[],n=0,running=true;
+    function add(){if(!running)return;n++;lines.push("["+String(n).padStart(4,"0")+"] "+pick(subject,r)+" / "+pick(action,r));lines=lines.slice(-9);log.textContent=lines.join("\n");}
+    add();const timer=setInterval(add,1500);addCleanup(()=>clearInterval(timer));
+    button(w,"受信を一時停止・再開",()=>{running=!running;});
+    button(w,"通信履歴を削除",()=>{lines=[];log.textContent="NO SIGNAL";});
+  }
   function openExhibit(id){
     const it=catalog.find(x=>x.id===id);if(!it)return;resetExperiment();current=it;
     $("#modal-code").textContent="MUSEUM / EXHIBIT "+String(it.number).padStart(3,"0");
     $("#modal-type").textContent=labels[it.category]||it.category;$("#modal-title").textContent=it.title;$("#modal-description").textContent=it.description;
     $("#modal-instruction").textContent=it.instruction||"PLEASE INTERACT. NOTHING IS EXPECTED.";
     modal.classList.add("is-open");modal.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";history.replaceState(null,"",basePath+"?exhibit="+encodeURIComponent(it.id));
-    const r=rng(it.seed);( {oracle,orbit,clock,queue,bureau,weather,machine,species}[it.mode]||oracle)(it,r);
+    const r=rng(it.seed);( {oracle,orbit,clock,queue,bureau,weather,machine,species,calculator,telegraph}[it.mode]||oracle)(it,r);
     $("#close").focus();
   }
   function closeExhibit(){resetExperiment();current=null;modal.classList.remove("is-open");modal.setAttribute("aria-hidden","true");document.body.style.overflow="";history.replaceState(null,"",basePath);}
