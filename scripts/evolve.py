@@ -18,7 +18,9 @@ MODES = [
     ("bureau", "document", "存在しない役所の窓口", "出す必要のない申請書を、受け取る気のない窓口へ。", "▤", ["#283d32", "#c4e2ae"], "FORM / SUBMIT NOTHING"),
     ("weather", "simulation", "地図にない地域の天気", "観測地点そのものが確認できない天気予報。", "☁", ["#2a3d47", "#a4d8e3"], "BUTTON / MOVE STATION"),
     ("machine", "machine", "自動的に役立たない出力装置", "何かは出ますが、その用途は誰も知りません。", "▣", ["#49352e", "#e6b499"], "BUTTON / PRINT A RECEIPT"),
-    ("species", "simulation", "未分類の小さな生態系", "学名が決まるより先に増え始めた存在たち。", "✳", ["#304535", "#b9f1a9"], "CLICK / RELOCATE ORGANISMS")
+    ("species", "simulation", "未分類の小さな生態系", "学名が決まるより先に増え始めた存在たち。", "✳", ["#304535", "#b9f1a9"], "CLICK / RELOCATE ORGANISMS"),
+    ("calculator", "machine", "確信を持って間違える計算機", "四則演算の答えに、必ずしも数を返しません。", "≠", ["#45402b", "#e7e68e"], "FORM / MAKE A MISTAKE"),
+    ("telegraph", "document", "宛先のない通信記録", "誰からも送られていない電文を受信し続けます。", "⋮", ["#2d3c49", "#add7ff"], "STREAM / INTERCEPT NOTHING")
 ]
 ADJECTIVES = [
     "遠慮がちな", "昨日から届いた", "誰も知らない", "内向的な", "未提出の", "小さすぎる",
