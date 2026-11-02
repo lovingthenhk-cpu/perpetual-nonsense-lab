@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026.11.02 23:25 JST",
+  "updated": "2026.11.02 23:30 JST",
   "exhibits": [
     {
       "id": "specimen-0001",
@@ -128,6 +128,22 @@
       ],
       "seed": 988710089,
       "instruction": "CLICK / RELOCATE ORGANISMS",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0009",
+      "number": 9,
+      "title": "帰宅途中の時計塔",
+      "description": "担当者は現在、不在ということになっています。 / 信用すると少し困る、根拠のない未来予測。",
+      "category": "machine",
+      "mode": "oracle",
+      "glyph": "◇",
+      "colors": [
+        "#28382d",
+        "#d4f18a"
+      ],
+      "seed": 1279999064,
+      "instruction": "BUTTON / ASK AGAIN",
       "date": "2026.11.02"
     }
   ]
