@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026.11.02 23:38 JST",
+  "updated": "2026.11.02 23:41 JST",
   "exhibits": [
     {
       "id": "specimen-0001",
@@ -319,6 +319,166 @@
         "#add7ff"
       ],
       "seed": 1599823308,
+      "instruction": "STREAM / INTERCEPT NOTHING",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0021",
+      "number": 21,
+      "title": "一度も開かない時計塔",
+      "description": "動作原理は不明ですが、操作には応じます。 / 信用すると少し困る、根拠のない未来予測。",
+      "category": "machine",
+      "mode": "oracle",
+      "glyph": "◇",
+      "colors": [
+        "#28382d",
+        "#d4f18a"
+      ],
+      "seed": 999479847,
+      "instruction": "BUTTON / ASK AGAIN",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0022",
+      "number": 22,
+      "title": "ややお節介な受付番号",
+      "description": "もう少しで意味が生まれそうですが、たぶん生まれません。 / 複数の点が、なぜかこの場所に集まり続ける。",
+      "category": "simulation",
+      "mode": "orbit",
+      "glyph": "◉",
+      "colors": [
+        "#18383b",
+        "#8ddbd6"
+      ],
+      "seed": 122023581,
+      "instruction": "MOUSE / DISTURB PARTICLES",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0023",
+      "number": 23,
+      "title": "消えそうな転送装置",
+      "description": "効果は実証されていません。結果だけが残ります。 / 正確であることを自主的に放棄した時刻表示。",
+      "category": "machine",
+      "mode": "clock",
+      "glyph": "◷",
+      "colors": [
+        "#433023",
+        "#f5c58a"
+      ],
+      "seed": 456706564,
+      "instruction": "BUTTON / CHANGE THE TIME",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0024",
+      "number": 24,
+      "title": "内向的な談話室",
+      "description": "効果は実証されていません。結果だけが残ります。 / 進捗率は数字です。完了を意味するものではありません。",
+      "category": "simulation",
+      "mode": "queue",
+      "glyph": "↻",
+      "colors": [
+        "#2f2b44",
+        "#c8b5ff"
+      ],
+      "seed": 516430331,
+      "instruction": "BUTTON / START OVER",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0025",
+      "number": 25,
+      "title": "予備の談話室",
+      "description": "有用性の審査は、まだ始まっていません。 / 出す必要のない申請書を、受け取る気のない窓口へ。",
+      "category": "document",
+      "mode": "bureau",
+      "glyph": "▤",
+      "colors": [
+        "#283d32",
+        "#c4e2ae"
+      ],
+      "seed": 1486122049,
+      "instruction": "FORM / SUBMIT NOTHING",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0026",
+      "number": 26,
+      "title": "反省中の失敗報告",
+      "description": "もう少しで意味が生まれそうですが、たぶん生まれません。 / 観測地点そのものが確認できない天気予報。",
+      "category": "simulation",
+      "mode": "weather",
+      "glyph": "☁",
+      "colors": [
+        "#2a3d47",
+        "#a4d8e3"
+      ],
+      "seed": 1301809736,
+      "instruction": "BUTTON / MOVE STATION",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0027",
+      "number": 27,
+      "title": "非公式の世界線",
+      "description": "どこかには必要かもしれません。ここでは不要です。 / 何かは出ますが、その用途は誰も知りません。",
+      "category": "machine",
+      "mode": "machine",
+      "glyph": "▣",
+      "colors": [
+        "#49352e",
+        "#e6b499"
+      ],
+      "seed": 72177065,
+      "instruction": "BUTTON / PRINT A RECEIPT",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0028",
+      "number": 28,
+      "title": "内向的な失敗報告",
+      "description": "担当者は現在、不在ということになっています。 / 学名が決まるより先に増え始めた存在たち。",
+      "category": "simulation",
+      "mode": "species",
+      "glyph": "✳",
+      "colors": [
+        "#304535",
+        "#b9f1a9"
+      ],
+      "seed": 508232250,
+      "instruction": "CLICK / RELOCATE ORGANISMS",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0029",
+      "number": 29,
+      "title": "規格外の将来予想",
+      "description": "有用性の審査は、まだ始まっていません。 / 四則演算の答えに、必ずしも数を返しません。",
+      "category": "machine",
+      "mode": "calculator",
+      "glyph": "≠",
+      "colors": [
+        "#45402b",
+        "#e7e68e"
+      ],
+      "seed": 909810318,
+      "instruction": "FORM / MAKE A MISTAKE",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0030",
+      "number": 30,
+      "title": "誰も知らない取扱説明書",
+      "description": "有用性の審査は、まだ始まっていません。 / 誰からも送られていない電文を受信し続けます。",
+      "category": "document",
+      "mode": "telegraph",
+      "glyph": "⋮",
+      "colors": [
+        "#2d3c49",
+        "#add7ff"
+      ],
+      "seed": 1803229939,
       "instruction": "STREAM / INTERCEPT NOTHING",
       "date": "2026.11.02"
     }
