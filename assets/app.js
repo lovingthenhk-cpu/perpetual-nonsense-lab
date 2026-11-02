@@ -138,13 +138,33 @@
     button(w,"受信を一時停止・再開",()=>{running=!running;});
     button(w,"通信履歴を削除",()=>{lines=[];log.textContent="NO SIGNAL";});
   }
+  function council(it,r){
+    const w=wrap("UNNECESSARY COMMITTEE / MINUTES", "※", "議事は公開されていますが、内容は公開できません。");
+    const result=mk("div","exp-output","本日の議題：会議を開催すべきか。");w.append(result);
+    const subjects=["透明な備品の補充","今後の昨日の扱い","空いている空席の利用","廊下の長さの定義","全員の欠席届","存在の監査","過剰な静寂"];
+    const results=["賛成多数で継続審議となりました。","全会一致で先送りされました。","議長の不在を確認しました。","会議が会議を否決しました。","審議の必要性に関する検討会を設置します。"];
+    let count=0;button(w,"議決を採択する ↗",()=>{count++;result.textContent="第"+count+"回臨時議会 / 議題："+pick(subjects,r)+"。\n決議："+pick(results,r);result.style.whiteSpace="pre-line";});
+  }
+  function elevator(it,r){
+    const w=wrap("ELEVATOR TO NONEXISTENT FLOORS",null,"現在の階が本当に存在するかどうか、確認中です。");
+    const display=mk("div","exp-display","B∞");w.append(display);
+    const result=mk("div","exp-output","DOOR CLOSED / WHERE ARE YOU?");w.append(result);
+    const floors=["地下 0 階","屋上の下","架空 3 階","昨日階","約 12.5 階","地平線階","保留階","不在階","存在しない 9 階","∞ 階","1階の手前"];
+    let busy=false;
+    function travel(direction){if(busy)return;busy=true;display.textContent=direction;result.textContent="移動中……";
+      const timeout=setTimeout(()=>{display.textContent=String(randInt(r,-99,99));result.textContent="到着："+pick(floors,r)+" / 扉が開く予定はありません。";busy=false;},850);
+      addCleanup(()=>clearTimeout(timeout));
+    }
+    button(w,"上へ ↑",()=>travel("↑"));
+    button(w,"下へ ↓",()=>travel("↓"));
+  }
   function openExhibit(id){
     const it=catalog.find(x=>x.id===id);if(!it)return;resetExperiment();current=it;
     $("#modal-code").textContent="MUSEUM / EXHIBIT "+String(it.number).padStart(3,"0");
     $("#modal-type").textContent=labels[it.category]||it.category;$("#modal-title").textContent=it.title;$("#modal-description").textContent=it.description;
     $("#modal-instruction").textContent=it.instruction||"PLEASE INTERACT. NOTHING IS EXPECTED.";
     modal.classList.add("is-open");modal.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";history.replaceState(null,"",basePath+"?exhibit="+encodeURIComponent(it.id));
-    const r=rng(it.seed);( {oracle,orbit,clock,queue,bureau,weather,machine,species,calculator,telegraph}[it.mode]||oracle)(it,r);
+    const r=rng(it.seed);( {oracle,orbit,clock,queue,bureau,weather,machine,species,calculator,telegraph,council,elevator}[it.mode]||oracle)(it,r);
     $("#close").focus();
   }
   function closeExhibit(){resetExperiment();current=null;modal.classList.remove("is-open");modal.setAttribute("aria-hidden","true");document.body.style.overflow="";history.replaceState(null,"",basePath);}
