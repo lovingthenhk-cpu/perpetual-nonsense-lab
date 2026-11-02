@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026.11.02 23:33 JST",
+  "updated": "2026.11.02 23:36 JST",
   "exhibits": [
     {
       "id": "specimen-0001",
@@ -192,6 +192,70 @@
       ],
       "seed": 539768637,
       "instruction": "BUTTON / START OVER",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0013",
+      "number": 13,
+      "title": "反省中の重力",
+      "description": "もう少しで意味が生まれそうですが、たぶん生まれません。 / 正確であることを自主的に放棄した時刻表示。",
+      "category": "machine",
+      "mode": "clock",
+      "glyph": "◷",
+      "colors": [
+        "#433023",
+        "#f5c58a"
+      ],
+      "seed": 1960278036,
+      "instruction": "BUTTON / CHANGE THE TIME",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0014",
+      "number": 14,
+      "title": "消えそうな世界線",
+      "description": "動作原理は不明ですが、操作には応じます。 / 進捗率は数字です。完了を意味するものではありません。",
+      "category": "simulation",
+      "mode": "queue",
+      "glyph": "↻",
+      "colors": [
+        "#2f2b44",
+        "#c8b5ff"
+      ],
+      "seed": 1332215292,
+      "instruction": "BUTTON / START OVER",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0015",
+      "number": 15,
+      "title": "帰宅途中の世界線",
+      "description": "動作原理は不明ですが、操作には応じます。 / 出す必要のない申請書を、受け取る気のない窓口へ。",
+      "category": "document",
+      "mode": "bureau",
+      "glyph": "▤",
+      "colors": [
+        "#283d32",
+        "#c4e2ae"
+      ],
+      "seed": 1069204166,
+      "instruction": "FORM / SUBMIT NOTHING",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0016",
+      "number": 16,
+      "title": "遠慮がちな時計塔",
+      "description": "もう少しで意味が生まれそうですが、たぶん生まれません。 / 観測地点そのものが確認できない天気予報。",
+      "category": "simulation",
+      "mode": "weather",
+      "glyph": "☁",
+      "colors": [
+        "#2a3d47",
+        "#a4d8e3"
+      ],
+      "seed": 876396756,
+      "instruction": "BUTTON / MOVE STATION",
       "date": "2026.11.02"
     }
   ]
