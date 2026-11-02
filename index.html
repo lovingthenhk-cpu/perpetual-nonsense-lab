@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1015">
+  <meta name="description" content="役に立たない実験を蒐集する、無意味博物館。触るたびに何かが起こる。">
+  <meta property="og:title" content="無意味博物館 — THE MUSEUM OF NOTHING">
+  <meta property="og:description" content="説明不能な小さな装置と、終わらない実験のための場所。">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <title>無意味博物館 | MUSEUM OF NOTHING</title>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="shell">
+    <header class="masthead">
+      <a href="./" class="brand" aria-label="無意味博物館 トップ"><span class="brand-mark">∅</span><span>MUSEUM OF<br>NOTHING</span></a>
+      <div class="mast-right"><span class="blink-dot"></span><span>OPEN 24/7 / 未完成</span><span id="date-jst"></span></div>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="main-title">
+        <div class="hero-top"><span>INDEPENDENT DIGITAL MUSEUM</span><span>EST. 2026 — FOREVER (?)</span></div>
+        <div class="hero-main">
+          <div class="hero-text">
+            <p class="eyebrow"><span class="square"></span>EXHIBITION IN PROGRESS</p>
+            <h1 id="main-title">無意味<br><span>博物館</span><span class="period">.</span></h1>
+            <p class="hero-sub">役に立たないものだけが、<br>ここでは真面目に展示されている。</p>
+            <div class="hero-actions"><button class="primary" id="surprise">適当な展示に飛び込む <span>↗</span></button><a class="minor-link" href="#collection">展示を一覧する <span>↓</span></a></div>
+          </div>
+          <div class="specimen" aria-label="回転する無意味な標本" role="img">
+            <div class="specimen-ring ring-1"></div><div class="specimen-ring ring-2"></div>
+            <div class="specimen-orb"><div class="orb-inner"></div></div>
+            <span class="specimen-label label-a">FIG. 000</span><span class="specimen-label label-b">NO OBJECTIVE</span><span class="specimen-label label-c">↗ ORBITAL NONSENSE</span>
+          </div>
+        </div>
+        <div class="hero-bottom"><span>SCROLL TO ENTER <span class="arrow-down">↙</span></span><span>「何もない」は、案外うるさい。</span></div>
+      </section>
+      <section class="counter-strip" aria-label="博物館の状態">
+        <div><span class="counter-label">ARCHIVED OBJECTS</span><strong id="total">000</strong></div>
+        <div><span class="counter-label">LAST MUTATION</span><strong id="lastupdate" class="counter-small">—</strong></div>
+        <div><span class="counter-label">CURRENT MOOD</span><strong class="counter-small" id="mood">計測不能</strong></div>
+        <div class="counter-aside">THIS MUSEUM DOES NOT<br>GUARANTEE MEANING.</div>
+      </section>
+      <section class="collection" id="collection">
+        <div class="section-intro"><div><p class="eyebrow"><span class="square"></span>THE COLLECTION</p><h2>所蔵品一覧 <span>/</span></h2></div><p>ここにあるものの動作には、<br>何の保証もありません。</p></div>
+        <div class="toolbar"><div class="filters" id="filters"><button class="chip is-active" data-filter="all">すべて <span>ALL</span></button><button class="chip" data-filter="machine">装置</button><button class="chip" data-filter="simulation">現象</button><button class="chip" data-filter="document">記録</button></div><label class="search"><span>⌕</span><input id="search" placeholder="存在しないものを探す…" aria-label="展示を検索"></label></div>
+        <div class="collection-grid" id="gallery" aria-live="polite"></div>
+        <div class="collection-end"><span>NO MORE OBJECTS. FOR NOW.</span><div class="line"></div><span>∞</span></div>
+      </section>
+      <section class="manifesto"><span class="eyebrow">ARTISTIC STATEMENT / 001</span><p>便利なものは、<em>もう十分ある。</em><br>だから私たちは、<br><strong>必要とされないもの</strong>をつくる。</p><div>← すべての展示は実際に操作できます。</div></section>
+    </main>
+    <footer><div><span class="footer-symbol">∅</span><strong>MUSEUM OF NOTHING</strong><span>AN UNNECESSARY INTERNET PROJECT</span></div><div>© NEVER FINISHED <span id="footer-year">2026</span><a href="https://github.com/lovingthenhk-cpu/perpetual-nonsense-lab" target="_blank" rel="noopener">SOURCE ↗</a></div></footer>
+  </div>
+  <div id="exhibit-modal" class="modal" aria-hidden="true">
+    <div class="modal-bar"><div class="modal-bar-left"><span class="modal-icon">∅</span><span id="modal-code">MUSEUM / EXHIBIT 000</span></div><button class="modal-close" id="close" aria-label="展示を閉じる">CLOSE <span>×</span></button></div>
+    <div class="modal-viewport"><div class="modal-info"><span id="modal-type" class="eyebrow"></span><h2 id="modal-title"></h2><p id="modal-description"></p><span id="modal-instruction"></span></div><div id="experiment" class="experiment"></div></div>
+    <div class="modal-bottom"><span>INTERACTIVE OBJECT / NO WARRANTY</span><button id="another">次の展示へ ↗</button></div>
+  </div>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
