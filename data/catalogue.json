@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026.11.02 23:36 JST",
+  "updated": "2026.11.02 23:38 JST",
   "exhibits": [
     {
       "id": "specimen-0001",
@@ -256,6 +256,70 @@
       ],
       "seed": 876396756,
       "instruction": "BUTTON / MOVE STATION",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0017",
+      "number": 17,
+      "title": "予備の余白",
+      "description": "どこかには必要かもしれません。ここでは不要です。 / 何かは出ますが、その用途は誰も知りません。",
+      "category": "machine",
+      "mode": "machine",
+      "glyph": "▣",
+      "colors": [
+        "#49352e",
+        "#e6b499"
+      ],
+      "seed": 1216921866,
+      "instruction": "BUTTON / PRINT A RECEIPT",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0018",
+      "number": 18,
+      "title": "ややお節介な重力",
+      "description": "有用性の審査は、まだ始まっていません。 / 学名が決まるより先に増え始めた存在たち。",
+      "category": "simulation",
+      "mode": "species",
+      "glyph": "✳",
+      "colors": [
+        "#304535",
+        "#b9f1a9"
+      ],
+      "seed": 2022319688,
+      "instruction": "CLICK / RELOCATE ORGANISMS",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0019",
+      "number": 19,
+      "title": "消えそうな時計塔",
+      "description": "担当者は現在、不在ということになっています。 / 四則演算の答えに、必ずしも数を返しません。",
+      "category": "machine",
+      "mode": "calculator",
+      "glyph": "≠",
+      "colors": [
+        "#45402b",
+        "#e7e68e"
+      ],
+      "seed": 675369179,
+      "instruction": "FORM / MAKE A MISTAKE",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0020",
+      "number": 20,
+      "title": "あきらめの悪い観測所",
+      "description": "効果は実証されていません。結果だけが残ります。 / 誰からも送られていない電文を受信し続けます。",
+      "category": "document",
+      "mode": "telegraph",
+      "glyph": "⋮",
+      "colors": [
+        "#2d3c49",
+        "#add7ff"
+      ],
+      "seed": 1599823308,
+      "instruction": "STREAM / INTERCEPT NOTHING",
       "date": "2026.11.02"
     }
   ]
