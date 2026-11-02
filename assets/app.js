@@ -5,7 +5,7 @@
   const labels = { machine:"装置 / DEVICE", simulation:"現象 / PHENOMENON", document:"記録 / DOCUMENT" };
   const modes = {oracle:"oracle",orbit:"orbit",clock:"clock",queue:"queue",bureau:"bureau",weather:"weather",machine:"machine",species:"species"};
   const basePath=location.pathname;
-  let catalog=[], filter="all", query="", cleanup=[], current=null;
+  let catalog=[], filter="all", query="", cleanup=[], current=null, visibleCount=12;
   const htmlSafe = s => String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   function rng(seed){let a=seed>>>0;return ()=>{a+=0x6D2B79F5;let t=a;t=Math.imul(t^t>>>15,t|1);t^=t+Math.imul(t^t>>>7,t|61);return ((t^t>>>14)>>>0)/4294967296;};}
   function pick(list,r){return list[Math.floor(r()*list.length)];}
@@ -15,14 +15,16 @@
   function draw(){
     const shown=catalog.filter(x=>(filter==="all"||x.category===filter) && (x.title+x.description+x.id).toLowerCase().includes(query.toLowerCase()));
     gallery.replaceChildren();
-    if(!shown.length){gallery.innerHTML='<div class="empty">NO MATCHES FOUND / お探しの無意味は存在しません。</div>';return;}
-    shown.forEach((it,i)=>{
+    if(!shown.length){$("#load-more").hidden=true;$("#visible-info").textContent="0 / 0";gallery.innerHTML='<div class="empty">NO MATCHES FOUND / お探しの無意味は存在しません。</div>';return;}
+    shown.slice(0,visibleCount).forEach((it,i)=>{
       const card=document.createElement("article");card.className="item";
       const artBg=it.colors&&it.colors[0]||"#233d2c";const fg=it.colors&&it.colors[1]||"#c2f161";
       card.innerHTML='<div class="item-art" style="--art-bg:'+htmlSafe(artBg)+'"><span class="art-index">NO. '+String(it.number).padStart(3,"0")+'</span><span class="glyph" style="color:'+htmlSafe(fg)+';--tilt:'+((it.seed%39)-19)+'deg">'+htmlSafe(it.glyph||"∅")+'</span><span class="art-decor">FIG. '+String(it.number).padStart(4,"0")+' / '+htmlSafe(it.mode.toUpperCase())+'</span></div>'+
         '<div class="item-bottom"><div class="item-meta"><span>'+htmlSafe(labels[it.category]||it.category)+'</span><span>'+htmlSafe(it.date||"UNKNOWN")+'</span></div><h3>'+htmlSafe(it.title)+'</h3><p>'+htmlSafe(it.description)+'</p><div class="item-foot"><span>OPEN THE EXPERIMENT</span><b>↗</b></div></div>';
       const btn=document.createElement("button");btn.className="item-open";btn.type="button";btn.setAttribute("aria-label",it.title+" を開く");btn.addEventListener("click",()=>openExhibit(it.id));card.appendChild(btn);gallery.appendChild(card);
     });
+    $("#load-more").hidden=shown.length<=visibleCount;
+    $("#visible-info").textContent=Math.min(shown.length,visibleCount)+" / "+shown.length;
   }
   const mk=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.className=cls;if(text!==undefined)e.textContent=text;return e;};
   function wrap(top,big,desc){const w=mk("div","exp-wrap");w.append(mk("p","exp-super",top));if(big)w.append(mk("div","exp-big",big));if(desc)w.append(mk("p","exp-desc",desc));exp.append(w);return w;}
@@ -149,8 +151,9 @@
   const randomExhibit=()=>{if(catalog.length)openExhibit(catalog[Math.floor(Math.random()*catalog.length)].id);};
   $("#close").addEventListener("click",closeExhibit);$("#another").addEventListener("click",randomExhibit);$("#surprise").addEventListener("click",randomExhibit);
   document.addEventListener("keydown",e=>{if(e.key==="Escape"&&current)closeExhibit();});
-  $("#filters").addEventListener("click",e=>{const b=e.target.closest("[data-filter]");if(!b)return;filter=b.dataset.filter;document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("is-active",c===b));draw();});
-  $("#search").addEventListener("input",e=>{query=e.target.value;draw();});
+  $("#filters").addEventListener("click",e=>{const b=e.target.closest("[data-filter]");if(!b)return;filter=b.dataset.filter;visibleCount=12;document.querySelectorAll(".chip").forEach(c=>c.classList.toggle("is-active",c===b));draw();});
+  $("#search").addEventListener("input",e=>{query=e.target.value;visibleCount=12;draw();});
+  $("#load-more").addEventListener("click",()=>{visibleCount+=12;draw();});
   const date=new Date();$("#date-jst").textContent=new Intl.DateTimeFormat("ja-JP",{timeZone:"Asia/Tokyo",month:"2-digit",day:"2-digit"}).format(date);
   $("#footer-year").textContent=new Intl.DateTimeFormat("en-US",{timeZone:"Asia/Tokyo",year:"numeric"}).format(date);
   $("#mood").textContent=["概ね良好","予測不能","ごく普通","何かがおかしい"][Math.floor(date.getHours()/6)];
