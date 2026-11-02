@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated": "2026.11.02 23:30 JST",
+  "updated": "2026.11.02 23:33 JST",
   "exhibits": [
     {
       "id": "specimen-0001",
@@ -144,6 +144,54 @@
       ],
       "seed": 1279999064,
       "instruction": "BUTTON / ASK AGAIN",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0010",
+      "number": 10,
+      "title": "消えそうな観測所",
+      "description": "担当者は現在、不在ということになっています。 / 複数の点が、なぜかこの場所に集まり続ける。",
+      "category": "simulation",
+      "mode": "orbit",
+      "glyph": "◉",
+      "colors": [
+        "#18383b",
+        "#8ddbd6"
+      ],
+      "seed": 45528866,
+      "instruction": "MOUSE / DISTURB PARTICLES",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0011",
+      "number": 11,
+      "title": "遠慮がちな存在確認",
+      "description": "有用性の審査は、まだ始まっていません。 / 正確であることを自主的に放棄した時刻表示。",
+      "category": "machine",
+      "mode": "clock",
+      "glyph": "◷",
+      "colors": [
+        "#433023",
+        "#f5c58a"
+      ],
+      "seed": 1985029496,
+      "instruction": "BUTTON / CHANGE THE TIME",
+      "date": "2026.11.02"
+    },
+    {
+      "id": "specimen-0012",
+      "number": 12,
+      "title": "気まぐれな孵化室",
+      "description": "動作原理は不明ですが、操作には応じます。 / 進捗率は数字です。完了を意味するものではありません。",
+      "category": "simulation",
+      "mode": "queue",
+      "glyph": "↻",
+      "colors": [
+        "#2f2b44",
+        "#c8b5ff"
+      ],
+      "seed": 539768637,
+      "instruction": "BUTTON / START OVER",
       "date": "2026.11.02"
     }
   ]
